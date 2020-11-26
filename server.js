@@ -6,13 +6,13 @@ const router = jsonServer.router(path.join(__dirname, 'db.json'));
 const middlewares = jsonServer.defaults();
 
 // Serve static files....
-server.use(express.static(__dirname + '/dist/ngrx-entity-crud-prime-ng-boilerplate'));
+server.use(express.static(__dirname + '/dist/ngrx-ecrud-activity'));
 
 server.use('/api/v1', middlewares);
 server.use('/api/v1', router);
 
 server.get('**', function (req, res) {
-  res.sendFile(path.join(__dirname + '/dist/ngrx-entity-crud-prime-ng-boilerplate/index.html'));
+  res.sendFile(path.join(__dirname + '/dist/ngrx-ecrud-activity/index.html'));
 });
 
 router.render = (req, res) => {

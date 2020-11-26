@@ -1,4 +1,4 @@
-# ngrx-entity-crud-prime-ng-boilerplate
+# ngrx-ecrud-activity
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.1.
 
 # How to use it?
