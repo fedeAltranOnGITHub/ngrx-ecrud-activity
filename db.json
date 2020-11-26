@@ -1,27 +1,22 @@
 {
   "coin": [
     {
-      "id": 1,
-      "nome": "luca"
+      "id": 11,
+      "value": "10",
+      "name": "xxxx",
+      "description": "xxxx"
     },
     {
-      "id": 2,
-      "nome": "luca"
+      "id": 12,
+      "value": "20",
+      "name": "xxxx",
+      "description": "xxxx"
     },
     {
-      "id": 3,
-      "nome": "luca"
-    },
-    {
-      "id": 4,
-      "nome": "luca"
-    },
-    {
-      "id": 5,
-      "nome": "luca"
-    },
-    { "id": 11, "value": "10", "name": "xxxx", "description": "xxxx" },
-    { "id": 12, "value": "20", "name": "xxxx", "description": "xxxx" },
-    { "id": 13, "value": "30", "name": "xxxx", "description": "xxxx" }
+      "id": 13,
+      "value": "30",
+      "name": "xxxx",
+      "description": "xxxx"
+    }
   ]
 }
