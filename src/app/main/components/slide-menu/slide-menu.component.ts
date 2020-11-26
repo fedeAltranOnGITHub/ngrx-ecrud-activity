@@ -81,6 +81,22 @@ export class SlideMenuComponent implements OnInit, OnDestroy {
             }
           }));
         }
+      },
+      {
+        label: 'Counter',
+        icon: 'pi pi-fw pi-external-link',
+        command: (event$) => {
+          // invoco il router per cambiare pagina
+          this.store$.dispatch(RouterStoreActions.RouterGo({path: ['counter']}));
+
+          // salvo nello store del menù l'elemento selezionato.
+          this.store$.dispatch(SlideMenuStoreActions.Select({
+            item: {
+              data: {},
+              breadcrumb: ['Counter']
+            }
+          }));
+        }
       }
     ];
     // const items = [
