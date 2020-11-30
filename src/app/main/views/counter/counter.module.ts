@@ -12,12 +12,18 @@ import {ButtonModule} from 'primeng/button';
 import {InputTextModule} from 'primeng/inputtext';
 import {SearchModule} from '@components/search/search.module';
 import {PipesModule} from '@core/pipe/pipes.module';
+import {IncrementComponent} from "@components/counter/increment/increment.component";
+import {DecrementComponent} from "@components/counter/decrement/decrement.component";
+import {ResetComponent} from "@components/counter/reset/reset.component";
 
 @NgModule({
   declarations: [
     CounterEditComponent,
     CounterMainComponent,
     CounterListComponent,
+    IncrementComponent,
+    DecrementComponent,
+    ResetComponent,
   ],
   imports: [
     CommonModule,
@@ -32,7 +38,13 @@ import {PipesModule} from '@core/pipe/pipes.module';
     SearchModule
   ],
   providers: [],
-  entryComponents: []
+  entryComponents: [],
+  exports: [
+    IncrementComponent,
+    DecrementComponent,
+    ResetComponent
+  ],
+
 })
 export class CounterModule {
 }
