@@ -2,13 +2,12 @@ counter-main.component.html
 
 <div>Current Count: {{ ( count$ | async ).value }}</div>
 
-<button (click)="increment()">Increment</button>
-<br/>
-<button (click)="decrement()">Decrement</button>
-<br/>
-<button (click)="reset()">Reset Counter</button>
-<br/>
-<br/>
+<p-button (click)="increment()">Increment</p-button>
+<br/><br/>
+<p-button (click)="decrement()">Decrement</p-button>
+<br/><br/>
+<p-button (click)="reset()">Reset Counter</p-button>
+<br/><br/>
 
 <app-increment></app-increment>
 

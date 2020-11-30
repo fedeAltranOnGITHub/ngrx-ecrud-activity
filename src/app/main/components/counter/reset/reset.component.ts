@@ -13,12 +13,7 @@ import {increment, decrement, reset} from "@root-store/counter-store/actions";
 })
 export class ResetComponent implements OnInit {
 
-  count$: Observable<Counter>;
-
-  //actions: Actions<Coin> = CounterStoreActions.actions;
-
   constructor(private readonly store$: Store<RootStoreState.State>) {
-    this.count$ = store$.select('counter');
   }
 
   ngOnInit(): void {
