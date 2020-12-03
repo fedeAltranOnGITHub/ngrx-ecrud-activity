@@ -4,13 +4,12 @@ import {CoinStoreActions, CoinStoreSelectors, RootStoreState} from '@root-store/
 import {Observable} from 'rxjs';
 import {Coin} from '@models/vo/coin';
 import {RouterStoreActions} from '@root-store/router-store/index';
-import {tap} from 'rxjs/operators';
 import {ConfirmationService} from 'primeng/api';
 import {PopUpData} from '@root-store/router-store/pop-up-base.component';
 
 @Component({
   selector: 'app-coin-list',
-  templateUrl: `coin-list.component.html`,
+  templateUrl: 'coin-list.component.html',
   styles: [``],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
@@ -27,21 +26,10 @@ export class CoinListComponent implements OnInit {
 
   ngOnInit() {
     console.log('CoinListComponent.ngOnInit()');
-
-    this.collection$ = this.store$.select(
-      CoinStoreSelectors.selectAll
-    ).pipe(
-      tap(values => {
-        if (values && values.length > 0) {
-          this.cols = Object.keys(values[0]);
-        }
-      })
-    );
-
+    this.collection$ = this.store$.select(CoinStoreSelectors.selectAll);
     this.store$.dispatch(
       CoinStoreActions.SearchRequest({queryParams: {}})
     );
-
   }
 
   onEdit(item) {
