@@ -34,5 +34,33 @@
       "name": "xxxx",
       "description": "xxxx"
     }
+  ],
+  "car": [
+    {
+      "id": 1,
+      "brand": "Audi",
+      "model": "A4",
+      "color": "darkgray"
+    },
+    {
+      "id": 2,
+      "brand": "Alfa Romeo",
+      "model": "Giulietta",
+      "color": "red"
+    }
+  ],
+  "structure": [
+    {
+      "id": 1,
+      "baseType": "integer",
+      "sumSymbol": "+",
+      "zero": "0"
+    },
+    {
+      "id": 2,
+      "baseType": "string",
+      "sumSymbol": ".",
+      "zero": "''"
+    }
   ]
 }

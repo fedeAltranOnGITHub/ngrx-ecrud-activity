@@ -12,6 +12,9 @@ import {Component, OnInit, ViewEncapsulation} from '@angular/core';
       <div class="p-col text-align-right">
         <em class="fas fa-2x fa-user fa-button p-1" style="color: #FFF;"></em>
       </div>
+      <div>
+        <app-logout-button label="logout"></app-logout-button>
+      </div>
     </div>
   `,
   styles: [`
