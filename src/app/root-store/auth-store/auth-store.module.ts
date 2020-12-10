@@ -9,15 +9,6 @@ import {Names} from './names';
 import {State} from './state';
 import {AuthService} from './auth.service';
 import {AuthMockService} from './auth-mock.service';
-import {localStorageSync} from "ngrx-store-localstorage";
-
-
-// const reducers: ActionReducerMap<IState> = {todos, visibilityFilter};
-
-// export function localStorageSyncReducer(reducer: ActionReducer<any>): ActionReducer<any> {
-//   return localStorageSync({keys: [Names.NAME]})(reducer);
-// }
-// const metaReducers: Array<MetaReducer<any, any>> = [localStorageSyncReducer];
 
 
 export const INJECTION_TOKEN = new InjectionToken<ActionReducer<Auth>>(`${Names.NAME}-store Reducers`);
@@ -27,7 +18,6 @@ export const INJECTION_TOKEN = new InjectionToken<ActionReducer<Auth>>(`${Names.
     CommonModule,
     StoreModule.forFeature(
       Names.NAME, INJECTION_TOKEN,
-      // {metaReducers}
     ),
     EffectsModule.forFeature([AuthStoreEffects]),
   ],

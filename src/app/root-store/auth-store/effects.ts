@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Actions, createEffect, ofType} from '@ngrx/effects';
 import * as actions from './actions';
-import {catchError, switchMap} from 'rxjs/operators';
+import {catchError, switchMap, tap} from 'rxjs/operators';
 import {RouterGo} from '@root-store/router-store/actions';
 import {AuthService} from './auth.service';
 import {afterLoginUri, afterLogoutUri} from './conf';
@@ -40,6 +40,21 @@ export class AuthStoreEffects {
           return [actions.LogoutError()];
         }),
       )),
+    )
+  );
+
+  loginRedirect$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(actions.GoToLogin),
+      // tap( v => console.log( 'value ', v ) ),
+      switchMap(
+        user => [
+          RouterGo({path: [afterLogoutUri]}),
+        ]
+      ),
+      catchError(err => {
+        return [actions.LogoutError()];
+      }),
     )
   );
 
